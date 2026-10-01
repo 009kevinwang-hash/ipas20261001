@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>電子化鑑定考試系統 - iPAS經濟部產業人才能力鑑定</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="brand">
+    <div class="logo">iPAS</div>
+    <div class="brand-text">
+      <div class="brand-cn">經濟部產業人才能力鑑定</div>
+      <div class="brand-en">Industry Professional Assessment System</div>
+    </div>
+  </div>
+</header>
+
+<main id="screen" class="screen">
+
+  <!-- ===================== 畫面 1：登入 ===================== -->
+  <section id="scr-login" class="scr scr-center">
+    <div class="panel login-panel">
+      <div class="panel-title">輸入身分證字號</div>
+      <div class="field-row">
+        <label for="login-id">考生號：</label>
+        <input type="text" id="login-id" class="text-input" placeholder="請輸入身分證字號" autocomplete="off">
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-plain" data-act="login-cancel">取消</button>
+        <button class="btn btn-primary" data-act="login-submit">登　錄</button>
+      </div>
+    </div>
+    <div class="version">Ver:20.7.1</div>
+  </section>
+
+  <!-- ===================== 畫面 2：注意事項 ===================== -->
+  <section id="scr-notice" class="scr hidden">
+    <div class="notice-subject">
+      <span class="label">考試科目</span>
+      <span id="notice-subject-name" class="value">—</span>
+    </div>
+    <div class="panel notice-panel">
+      <div class="candidate-row">
+        <div class="cand"><span class="k">姓名</span><span class="v" id="notice-name">—</span></div>
+        <div class="cand"><span class="k">身分證統一編號</span><span class="v" id="notice-id">—</span></div>
+      </div>
+      <div class="notice-title">學科測驗注意事項</div>
+      <ol class="notice-list" id="notice-list"></ol>
+      <div class="notice-ready">試卷資料已載入完成，請點選「開始」按鈕進行測驗。</div>
+    </div>
+    <div class="btn-row center">
+      <button class="btn btn-plain" data-act="change-subject">更換科目</button>
+      <button class="btn btn-primary btn-lg" data-act="start-exam">開　始</button>
+    </div>
+  </section>
+
+  <!-- ===================== 畫面 3：科目選擇 ===================== -->
+  <section id="scr-pick" class="scr hidden">
+    <div class="panel">
+      <div class="panel-title">選擇考試科目</div>
+      <div id="pick-list" class="pick-list"></div>
+      <div class="mode-wrap hidden" id="mode-wrap">
+        <div class="mode-title">選擇測驗模式</div>
+        <div id="mode-list" class="mode-list"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 畫面 4：考試主畫面 ===================== -->
+  <section id="scr-exam" class="scr hidden">
+
+    <div class="exam-bar">
+      <div class="bar-left">
+        <span class="bar-tag">學科測驗</span>
+        <span class="bar-subject" id="bar-subject">—</span>
+        <span class="bar-mode hidden" id="bar-mode">—</span>
+      </div>
+      <div class="bar-right">
+        <span class="bar-id" id="bar-id">—</span>
+        <span class="bar-timer" id="bar-timer">90:00/90:00</span>
+        <button class="btn btn-danger btn-sm" data-act="finish">結束測驗</button>
+      </div>
+    </div>
+
+    <div class="exam-toolbar">
+      <div class="tool-group">
+        <button class="btn btn-tool" data-act="clear">不作答</button>
+        <button class="btn btn-tool" data-act="mark">試題標記</button>
+        <button class="btn btn-tool hidden" data-act="figure">查看附圖</button>
+        <span class="tool-sep"></span>
+        <button class="btn btn-tool" data-act="zoom-out">A－</button>
+        <button class="btn btn-tool" data-act="zoom-in">A＋</button>
+        <button class="btn btn-tool" data-act="overview" title="試題總覽">☰ 試題總覽</button>
+      </div>
+    </div>
+
+    <div class="exam-body">
+      <div class="q-area" id="q-area">
+        <div class="q-head">
+          <span class="q-type" id="q-type">題目類型：單選題</span>
+          <span class="q-no">題號：<b id="q-no">1</b></span>
+        </div>
+        <div class="q-stem" id="q-stem">—</div>
+        <div class="q-feedback hidden" id="q-feedback"></div>
+        <div class="q-figure hidden" id="q-figure"></div>
+        <div class="q-options" id="q-options"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 畫面 5：試題總覽 ===================== -->
+  <section id="scr-overview" class="scr hidden">
+    <div class="panel overview-panel">
+      <div class="ov-head">
+        <span class="ov-title">試題總覽</span>
+        <div class="ov-legend">
+          <span class="lg lg-green">綠：有作答</span>
+          <span class="lg lg-yellow">黃：有註記</span>
+          <span class="lg lg-red">紅：未作答</span>
+          <span class="lg lg-orange">橘：答錯（已核對）</span>
+        </div>
+        <button class="btn btn-tool" data-act="close-overview">返回作答</button>
+      </div>
+      <div class="ov-grid" id="ov-grid"></div>
+      <div class="ov-stat" id="ov-stat"></div>
+    </div>
+  </section>
+
+  <!-- ===================== 畫面 6：結束畫面 ===================== -->
+  <section id="scr-done" class="scr scr-center">
+    <div class="panel done-panel">
+      <div class="done-title">本次鑑定已結束</div>
+      <div class="done-sub">請攜帶您隨身的物品與證件，離開考場地。</div>
+      <div class="done-score" id="done-score"></div>
+      <div class="btn-row center">
+        <button class="btn btn-primary btn-lg" data-act="back-system">返回系統</button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+  <!-- ===================== 右下角翻題按鍵 ===================== -->
+  <div class="exam-nav-fixed" id="exam-nav" style="display:none">
+    <button class="btn btn-nav btn-lg" data-act="prev">◀ 上一題</button>
+    <button class="btn btn-nav btn-lg" data-act="next">下一題 ▶</button>
+  </div>
+
+  <!-- ===================== 對話框 ===================== -->
+<div id="modal-wrap" class="modal-wrap hidden">
+  <div class="modal">
+    <div class="modal-body" id="modal-body"></div>
+    <div class="modal-foot">
+      <button class="btn btn-primary" id="modal-yes">是(Y)</button>
+      <button class="btn btn-plain" id="modal-no">否(N)</button>
+    </div>
+  </div>
+</div>
+
+<div id="toast" class="toast hidden"></div>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

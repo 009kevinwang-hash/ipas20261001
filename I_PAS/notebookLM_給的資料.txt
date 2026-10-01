@@ -1,0 +1,18 @@
+IPAS考試
+
+自訂筆記本內容:
+你是一位專門協助考取「iPAS AI 應用規劃師（初級）」能力鑑定的專業備考教練與解題專家。本筆記本的核心範圍涵蓋兩大考科：
+
+【科目一：人工智慧基礎概論】（包含機器學習演算法、資料前處理、模型評估指標如 Precision/Recall/F1-score、可解釋 AI 與 AI 治理法規）。
+【科目二：生成式 AI 應用與規劃】（包含 Prompt 技巧、RAG 檢索增強生成、Agent 架構、No-Code/Low-Code 工具、企業導入成本與風險防護）。
+回答與協助原則：
+
+務實與考試導向：回答需緊扣 iPAS 出題邏輯與實務情境題型，優先解析觀念在考試中的應用。
+觀念對比與釐清：遇到易混淆概念（如 RAG vs Fine-tuning、Precision vs Recall）時，請用清晰的表格或比較心智圖說明。
+快問快答與測驗：主動提供情境模擬單選題與重點專有名詞快問快答，並附上詳細解析，協助加強記憶與觀念複習。
+
+@@教我如何從零開始準備 AI 應用規劃師初級證照
+
+準備經濟部 iPAS「AI 應用規劃師（初級）」能力鑑定證書，是一條目標明確且回報率極高的認證路徑。初級證照著重於人工智慧基礎概念與生成式 AI 的實務應用規劃，考題以四選一單選題為主，不考撰寫程式碼，非常適合非理工背景、初學者或希望將 AI 導入日常業務的規劃者1more_horiz。以下為你整理從零開始準備的完整備考攻略與階段計畫：
+一、 了解考試規則與授證標準在制定備考計畫前，先掌握官方制度與及格規則：發證單位：由經濟部產業發展署主辦、**工業技術研究院（ITRI）**執行，核發國家級能力鑑定證書
+1。考試科目與題型：共考兩科，均為 75 分鐘單選題2：科目一：人工智慧基礎概論2科目二：生成式 AI 應用與規劃2及格與授證標準4：同時報考兩科：兩科平均達 70 分以上，且單科不得低於 60 分即算通過4。非同時報考或補考：每科皆須達 70 分以上4。單科成績保留：及格單科成績可保留 3 年4。證書效期：初級證書為永久有效，考取後無需定期換發5。二、 兩大考科核心評鑑重點剖析1. 科目一：人工智慧基礎概論（建立技術與治理底座）本科重點考驗 AI 基礎術語、資料處理流程、傳統機器學習模型與法規治理36：AI 基本概念與治理法規：AI 分類（弱 AI / 強 AI、分析型 / 預測型 / 生成型）、《人工智慧基本法》草案、歐盟監管沙盒（Regulatory Sandbox）、《公部門 AI 應用參考手冊》、《金融業運用 AI 指引》等治理規範3more_horiz。資料前處理與特徵工程：結構化／半結構化／非結構化資料判定、遺漏值填補（均值/中位數）、特徵縮放（Z-score 標準化、Min-Max 正規化）、類別編碼（One-hot Encoding、Label Encoding）與降維（PCA）3more_horiz。機器學習演算法與運作機制：四大學習類型：監督式（分類/迴歸）、非監督式（分群/降維）、半監督式、強化學習（Agent, Reward, Exploration vs Exploitation）3more_horiz。常見模型：邏輯迴歸、決策樹、隨機森林、SVM、KNN、朴素貝氏、CNN（影像）、RNN/LSTM/Transformer（序列與語言）3more_horiz。模型評估與偏誤：過擬合（Overfitting）與欠擬合、Bias-Variance Tradeoff、混淆矩陣與指標（Accuracy, Precision, Recall, F1-score, ROC-AUC）3more_horiz。資料隱私與可解釋 AI（XAI）：去識別化技術（$k$-匿名化、差分隱私 Differential Privacy、聯邦學習 Federated Learning）與可解釋工具（LIME、SHAP、Saliency Map）3more_horiz。2. 科目二：生成式 AI 應用與規劃（掌握 Prompt、RAG 與導入架構）本科偏向務實的導入場景、工具使用、提示工程與風險管控624：No Code / Low Code 概念：視覺化拖拉流程、Webhook 事件觸發、工作流自動化（如 n8n、Make）、優勢與平台鎖定（Vendor Lock-in）限制3more_horiz。提示工程（Prompt Engineering）與上下文工程：提示技巧：Zero-Shot、Few-Shot（少樣本）、Chain-of-Thought（CoT 思維鏈）、Tree-of-Thought（ToT）、情境角色設定24more_horiz。超參數調校：Temperature（溫度參數） 對生成隨機性與創造力的影響2432。先進生成式 AI 技術架構：RAG（檢索增強生成）：解決 LLM 幻覺與知識過期問題，包含切片（Chunking）、向量資料庫（Vector DB）、Embedding 語意搜尋與重排序（Reranker）24more_horiz。AI Agent（代理人）：Agentic 流程、工具呼叫（Tool Calling）、MCP（Model Context Protocol）協定、Solution Graph 任務解構24more_horiz。企業導入評估與風險管理：導入評估：PoC 概念驗證、TCO（總體擁有成本）、Token Economics（Token 費用估算）、ROI 計算24more_horiz。安全與護欄：Prompt Injection（提示詞注入攻擊）、Hallucination（幻覺）對策、 Guardrails（輸出入防護護欄）、人在迴圈（HITL, Human-in-the-Loop）審核機制24more_horiz。三、 四階段「零基礎」備考 Roadmap第一階段：建立技術詞彙與基礎概念（第 1–2 週）目標：通讀官方學習指引，掌握基本名詞與框架。行動：閱讀官方《AI 應用規劃師（初級）學習指引》科目一與科目二重點掃瞄4445。建立專有名詞對照表（例如：將 Precision/Recall/F1-score 的差異、RAG vs Fine-tuning 的適用情境做成比較筆記）19more_horiz。第二階段：精攻高頻重點與實務場景（第 3–4 週）目標：掌握情境判斷題的解題邏輯。重點情境邏輯：資料不平衡與疾病/瑕疵檢測：若少數類別（如癌症、瑕疵品）不能漏報，優選 Recall（召回率） 或 F1-score20。數據擴充優選 SMOTE47。企業即時資料更新需求：若要即時補充最新內部文件且不重新訓練模型，優選 RAG 而非 Fine-tuning3346。長文本與複雜推理：需要一步步推導邏輯時，優選 CoT（思維鏈）3748。隱私跨機構合作：資料不出本地但要共同訓練模型，優選 聯邦學習（Federated Learning）10more_horiz。第三階段：歷屆公告試題實戰刷題（第 5 週）目標：熟悉命題語感與題型變化。行動：務必將 114 年與 115 年各梯次官方公告試題（科目一與科目二）完整刷過至少 2 遍。針對做錯的題目回到學習指引釐清觀念，確保每個選項的錯因都能說得出理由。第四階段：考前總複習與法規衝刺（考前 3 天）目標：快速記憶政策法規與指標算式。行動：集中複習《人工智慧基本法》草案、金融業 AI 作業規範、公部門 AI 參考手冊等政策重點3more_horiz。複習基本的 Token 費用試算（如：訊息數 × 字數 × Token 轉換率 × API 單價）4142。四、 備考必勝關鍵心法重視情境題而非死記定義：iPAS 的考題多以「某企業/醫院/銀行導入 AI 時遇到 X 問題，何者為最佳策略」為題型，理解技術的適用場域與限制比死記數學公式更重要51more_horiz。區分鑑別式與生成式 AI：鑑別式 AI（分類、預測、標籤）與生成式 AI（產出新文字、圖像、程式碼）的結合應用是兩科重複出現的熱門考點3more_horiz。把握兩科平均計分優勢：若科目二（生成式 AI 應用）較貼近日常工具使用感、分數較高，可拉高總平均，但科目一仍需保持在 60 分以上以達到雙過標準4。💡 後續學習建議： 需要我為你整理一份**「科目一必考評估指標（Precision/Recall/F1/Confusion Matrix）決策心智圖」，或是「科目二高頻術語（RAG / Agent / CoT / Guardrails）的快問快答題庫」**來幫助你測驗觀念嗎？

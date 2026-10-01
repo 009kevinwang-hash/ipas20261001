@@ -1,0 +1,13 @@
+{
+  "name": "ipas-exam-mock",
+  "private": true,
+  "version": "1.0.0",
+  "description": "iPAS 經濟部產業人才能力鑑定 - 電腦測驗模擬系統",
+  "scripts": {
+    "serve": "python -m http.server 8000",
+    "e2e": "node tools/e2e.js"
+  },
+  "devDependencies": {
+    "playwright-core": "^1.56.1"
+  }
+}
